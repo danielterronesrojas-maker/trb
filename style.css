@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(99, 97, 236);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+form{
+    background-color: wheat;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+form h2{
+    font-size: 30px;
+    font-family:cursive;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.mortis{
+    position: relative;
+}
+
+.mortis > i{
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.mortis > input{
+    padding: 15px 25px 15px 65px;
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 35px;
+    background-color:beige;
+    font-size:medium;
+    color: rgb(0, 0, 0);
+    outline: none;
+}
+
+.mortis > input::placeholder{
+    color: rgb(46, 45, 45);
+    font-size: medium;
+    font-style: italic;
+}
+
+.mandy > a{
+    display: block;
+    color: lightslategrey;
+    font-family: cursive;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.mandy > .dandy{
+    padding: 15px 25px;
+    border-radius: 25px;
+    background-color: beige;
+    cursor: pointer;
+    font-style:unset;
+    font-weight: bold;
+}
+
+.success{
+    position: absolute;
+    top: 50px;
+    color: lime;
+    font-size: 18px;
+}
+
+.error{
+    position: absolute;
+    top: 50px;
+    color: rgb(255, 0, 0);
+    font-size: 18px;
+}    
+
+@media (max-width: 800px){
+    body{
+        padding: 25px;
+    }
+    form {
+        width: 300px;
+    }
+}
