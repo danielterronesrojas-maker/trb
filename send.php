@@ -12,10 +12,9 @@ if(isset($_POST['send'])) {
         $name = trim($_POST['name']);
         $password = trim($_POST['password']);
         $correo = trim($_POST['correo']);
-        $telefono = trim($_POST['telefono']);   
-        $fecha = date("d/m/y");
+        $telefono = trim($_POST['telefono']);
         $consulta = "INSERT INTO datos (name, password, correo, telefono, fecha) 
-                     VALUES ('$name', '$password', '$correo', '$telefono', '$fecha')";
+                     VALUES ('$name', '$password', '$correo', '$telefono', NOW())";
         $resultado = mysqli_query($connection, $consulta);
         if($resultado){
             ?>
@@ -26,5 +25,9 @@ if(isset($_POST['send'])) {
             <h3 class="error">¡Ups ha ocurrido un error!</h3>
             <?php
         }
+    } else {
+        ?>
+        <h3 class="error">¡Por favor complete los campos!</h3>
+        <?php
     }
 }
